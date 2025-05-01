@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+
+</head>
+<body>
+    <div class="bg-red-500 flex  justify-center h-screen items-center">
+        <div class="flex flex-col bg-white rounded-md gap-3  p-5">
+            <p class="text-center">Check Even or Odd</p>
+            <input class="border-1 rounded-md" id="value" type="number" placeholder="Enter the number">
+            <button class="bg-purple-300 hover:bg-purple-700 hover:text-white rounded-md" onclick="evenorodd()">Check Even</button>
+            <button class="bg-green-300 hover:bg-green-700 hover:text-white rounded-md" onclick="leap()">Check Leaper</button>
+            <p class="text-center" id="result"></p>
+        </div>
+    </div>
+    <script>
+        function evenorodd(){
+            const value = document.getElementById("value").value;
+
+            if (value %2 == 0){
+                console.log('Even');
+                document.getElementById("result").innerHTML = "Even";
+
+            }
+            else{
+                console.log('Odd');
+                document.getElementById("result").innerHTML = 'Odd';
+            }
+
+          
+        }
+
+        function leap(){
+            const year = document.getElementById("value").value;
+
+            if (year%4 == 0){
+                console.log('True');
+                document.getElementById("result").innerHTML = 'True';
+
+            }
+            else{
+                console.log('False');
+                document.getElementById("result").innerHTML = 'False';
+            }
+
+          
+        }
+    
+
+    </script>
+</body>
+</html>
